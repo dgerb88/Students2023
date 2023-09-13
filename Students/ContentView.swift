@@ -11,10 +11,10 @@ struct ContentView: View {
     let students: [Student]
     var body: some View {
         let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
-        return ForEach(students, id: \.self) { student in
-            ScrollView {
-                LazyVGrid(columns: columns) {
-                    Text("ryan is awesome!!!!!")
+        ScrollView {
+            ForEach(students, id: \.self) { student in
+                LazyVStack(alignment: .center) {
+                    Text("Ryan is awesome!!!")
                     StudentCell(student: student)
                         .frame(width: 150, height: 150)
                 }

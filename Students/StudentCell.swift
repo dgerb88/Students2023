@@ -14,7 +14,7 @@ struct StudentCell: View {
         VStack {
             Image(uiImage: student.image)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .scaledToFit()
             Text(student.name)
         }
     }
