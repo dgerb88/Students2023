@@ -14,6 +14,7 @@ struct ContentView: View {
         return ForEach(students, id: \.self) { student in
             ScrollView {
                 LazyVGrid(columns: columns) {
+                    Text("guess who's back")
                     StudentCell(student: student)
                         .frame(width: 150, height: 150)
                 }
@@ -22,8 +23,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(students: Student.allStudents)
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(students: Student.allStudents)
+//    }
+//}
