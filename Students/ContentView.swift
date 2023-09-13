@@ -14,6 +14,7 @@ struct ContentView: View {
         return ForEach(students, id: \.self) { student in
             ScrollView {
                 LazyVGrid(columns: columns) {
+                    Text("ryan is awesome")
                     StudentCell(student: student)
                         .frame(width: 150, height: 150)
                 }
